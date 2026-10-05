@@ -14,25 +14,25 @@
                     href="/" 
                     class="text-gray-700 hover:text-primary-500 px-3 py-2 text-sm font-medium transition-colors {{ request()->is('/') ? 'text-primary-500' : '' }}"
                 >
-                    Accueil
+                    {{ __('navigation.home') }}
                 </a>
                 <a 
                     href="/services" 
                     class="text-gray-700 hover:text-primary-500 px-3 py-2 text-sm font-medium transition-colors {{ request()->is('services*') ? 'text-primary-500' : '' }}"
                 >
-                    Services
+                    {{ __('navigation.services') }}
                 </a>
                 <a 
                     href="/tarifs" 
                     class="text-gray-700 hover:text-primary-500 px-3 py-2 text-sm font-medium transition-colors {{ request()->is('tarifs*') ? 'text-primary-500' : '' }}"
                 >
-                    Tarifs
+                    {{ __('navigation.pricing') }}
                 </a>
                 <a 
                     href="/contact" 
                     class="text-gray-700 hover:text-primary-500 px-3 py-2 text-sm font-medium transition-colors {{ request()->is('contact*') ? 'text-primary-500' : '' }}"
                 >
-                    Contact
+                    {{ __('navigation.contact') }}
                 </a>
             </nav>
             
@@ -42,21 +42,21 @@
                 <div class="flex space-x-1">
                     <a 
                         href="/?lang=fr" 
-                        class="text-sm font-medium text-gray-700 hover:text-primary-500 px-2 py-1 rounded transition-colors {{ app()->getLocale() === 'fr' ? 'bg-primary-50 text-primary-500' : '' }}"
+                        class="text-sm font-medium text-gray-700 hover:text-primary-500 px-2 py-1 rounded transition-colors {{ app()->getLocale() === 'fr' ? 'bg-primary-500 text-white' : '' }}"
                     >
                         FR
                     </a>
                     <a 
-                        href="/?lang=nl" 
-                        class="text-sm font-medium text-gray-700 hover:text-primary-500 px-2 py-1 rounded transition-colors {{ app()->getLocale() === 'nl' ? 'bg-primary-50 text-primary-500' : '' }}"
-                    >
-                        NL
-                    </a>
-                    <a 
                         href="/?lang=en" 
-                        class="text-sm font-medium text-gray-700 hover:text-primary-500 px-2 py-1 rounded transition-colors {{ app()->getLocale() === 'en' ? 'bg-primary-50 text-primary-500' : '' }}"
+                        class="text-sm font-medium text-gray-700 hover:text-primary-500 px-2 py-1 rounded transition-colors {{ app()->getLocale() === 'en' ? 'bg-primary-500 text-white' : '' }}"
                     >
                         EN
+                    </a>
+                    <a 
+                        href="/?lang=nl" 
+                        class="text-sm font-medium text-gray-700 hover:text-primary-500 px-2 py-1 rounded transition-colors {{ app()->getLocale() === 'nl' ? 'bg-primary-500 text-white' : '' }}"
+                    >
+                        NL
                     </a>
                 </div>
                 
@@ -68,7 +68,7 @@
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/>
                     </svg>
-                    Espace Client
+                    {{ __('navigation.client_area') }}
                 </a>
                 
                 <!-- Menu Mobile -->
@@ -91,25 +91,25 @@
                 href="/" 
                 class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-md transition-colors"
             >
-                Accueil
+                {{ __('navigation.home') }}
             </a>
             <a 
                 href="/services" 
                 class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-md transition-colors"
             >
-                Services
+                {{ __('navigation.services') }}
             </a>
             <a 
                 href="/tarifs" 
                 class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-md transition-colors"
             >
-                Tarifs
+                {{ __('navigation.pricing') }}
             </a>
             <a 
                 href="/contact" 
                 class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary-500 hover:bg-gray-50 rounded-md transition-colors"
             >
-                Contact
+                {{ __('navigation.contact') }}
             </a>
             <div class="border-t border-gray-200 mt-4 pt-4">
                 <a 
@@ -119,7 +119,7 @@
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/>
                     </svg>
-                    Espace Client
+                    {{ __('navigation.client_area') }}
                 </a>
             </div>
         </div>
