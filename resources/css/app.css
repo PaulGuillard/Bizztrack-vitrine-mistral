@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles for BizzTrack */
+/* Custom base styles */
 @layer base {
     html {
         font-family: 'Inter', sans-serif;
@@ -13,15 +13,16 @@
     }
 }
 
+/* Custom component styles */
 @layer components {
     /* Primary Button */
     .btn-primary {
-        @apply bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-md shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+        @apply bg-[#009DCD] hover:bg-[#0077B6] text-white font-semibold py-3 px-6 rounded-md shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#009DCD] focus:ring-offset-2;
     }
     
     /* Secondary Button */
     .btn-secondary {
-        @apply bg-transparent hover:bg-primary-50 text-primary-500 hover:text-primary-600 border-2 border-primary-500 font-semibold py-3 px-6 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+        @apply bg-transparent hover:bg-[#B3E5FC] text-[#009DCD] hover:text-[#0077B6] border-2 border-[#009DCD] font-semibold py-3 px-6 rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#009DCD] focus:ring-offset-2;
     }
     
     /* Outline Button */
@@ -40,7 +41,7 @@
     
     /* Form Input */
     .form-input {
-        @apply w-full px-4 py-3 border border-gray-300 rounded-md text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all duration-200;
+        @apply w-full px-4 py-3 border border-gray-300 rounded-md text-gray-800 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#009DCD] focus:border-[#009DCD] transition-all duration-200;
     }
     
     .form-label {
@@ -52,14 +53,60 @@
     }
 }
 
+/* Custom utility styles */
 @layer utilities {
     /* Gradient for Hero */
     .gradient-primary {
-        @apply bg-gradient-to-br from-primary-500 to-primary-700;
+        @apply bg-gradient-to-br from-[#009DCD] to-[#005F9E];
     }
     
     /* Text gradient */
     .text-gradient {
-        @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-500 to-primary-700;
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-[#009DCD] to-[#005F9E];
+    }
+    
+    /* Primary color utilities */
+    .text-primary-500 {
+        color: #009DCD;
+    }
+    
+    .bg-primary-500 {
+        background-color: #009DCD;
+    }
+    
+    .border-primary-500 {
+        border-color: #009DCD;
+    }
+    
+    .ring-primary-500 {
+        --tw-ring-color: #009DCD;
+    }
+    
+    .bg-primary-100 {
+        background-color: #B3E5FC;
+    }
+    
+    .text-primary-600 {
+        color: #0077B6;
+    }
+    
+    /* Tachygraph color */
+    .bg-tachygraph-500 {
+        background-color: #8B5CF6;
+    }
+    
+    /* Payroll color */
+    .bg-payroll-500 {
+        background-color: #10B981;
+    }
+    
+    /* Missions color */
+    .bg-missions-500 {
+        background-color: #F59E0B;
+    }
+    
+    /* PTO color */
+    .bg-pto-500 {
+        background-color: #EC4899;
     }
 }
